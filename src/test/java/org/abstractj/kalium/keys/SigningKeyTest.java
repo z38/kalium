@@ -138,9 +138,9 @@ public class SigningKeyTest {
     }
 
     @Test
-    public void testGetPrivateKey() {
+    public void testConvertToPrivateKey() {
         SigningKey key = new SigningKey(SIGN_PRIVATE, HEX);
-        assertEquals(key.getPrivateKey().toString(), SIGN_PRIVATE_PRIVATE);
+        assertEquals(key.convertToPrivateKey().toString(), SIGN_PRIVATE_ENCRYPTION);
     }
 
     @Test

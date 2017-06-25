@@ -60,8 +60,8 @@ public class SigningKey {
         return this.verifyKey;
     }
 
-    public PrivateKey getPrivateKey() {
-        byte []secretKey = zeros(CRYPTO_SCALARMULT_CURVE25519_BYTES);
+    public PrivateKey convertToPrivateKey() {
+        byte[] secretKey = zeros(CRYPTO_SCALARMULT_CURVE25519_BYTES);
         sodium().crypto_sign_ed25519_sk_to_curve25519(secretKey, seed);
         return new PrivateKey(secretKey);
     }

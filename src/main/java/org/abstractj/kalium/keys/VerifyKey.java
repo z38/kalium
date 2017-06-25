@@ -42,8 +42,8 @@ public class VerifyKey {
         this(encoder.decode(key));
     }
 
-    public PublicKey getPublicKey() {
-        byte []publicKey = zeros(CRYPTO_SCALARMULT_CURVE25519_BYTES);
+    public PublicKey convertToPublicKey() {
+        byte[] publicKey = zeros(CRYPTO_SCALARMULT_CURVE25519_BYTES);
         sodium().crypto_sign_ed25519_pk_to_curve25519(publicKey, key);
         return new PublicKey(publicKey);
     }
