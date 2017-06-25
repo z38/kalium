@@ -360,6 +360,22 @@ public class NaCl {
                 @In @u_int64_t int passwdlen);
 
         // ---------------------------------------------------------------------
+        // Key derivation
+
+        int CRYPTO_KDF_BLAKE2B_BYTES_MIN = 16;
+
+        int CRYPTO_KDF_BLAKE2B_BYTES_MAX = 64;
+
+        int CRYPTO_KDF_BLAKE2B_CONTEXTBYTES = 8;
+
+        int CRYPTO_KDF_BLAKE2B_KEYBYTES = 32;
+
+        int crypto_kdf_blake2b_derive_from_key(
+                @Out byte[] subkey, @In @u_int64_t int subkeyLen,
+                @In @u_int64_t int subkeyId, @In byte[] context,
+                @In byte[] key);
+
+        // ---------------------------------------------------------------------
         // Advanced: AES256-GCM
 
         // TODO

@@ -115,4 +115,13 @@ public class TestVectors {
             "4eb2ca19ebcf917f0f34200a9edbad3901b64ab09cc5ef7b9bcc3c40c0ff7509";
     public static final String SIGN_PUBLIC = "77f48b59caeda77751ed138b0ec667ff50f8768c25d48309a8f386a2bad187fb";
     public static final String SIGN_PUBLIC_ENCRYPTION = "35488a98f7ec26ae27099809afb27587b198b1197b5bcb0dec41153db2bf9952";
+
+
+    /**
+     * Key derivation test vectors
+     */
+
+    public static final String KDF_CONTEXT = "KDF test";
+    public static final String KDF_KEY = "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f";
+    public static final String KDF_SUBKEY_9 = "70f9b83e463fb441e7a4c43275125cd5b19d8e2e4a5d179a39f5db10bbce745a199104563d308cf8d4c6b27bbb759ded232f5bdb7c367dd632a9677320dfe416";
 }
